@@ -751,7 +751,7 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'default',
+        preset = 'super-tab',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -909,6 +909,11 @@ require('lazy').setup({
     },
   },
 })
+
+require('autoclose').setup()
+
+--Setting the 80 column ruler for Linux kernel code style guidelines
+vim.opt.colorcolumn = '80'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
