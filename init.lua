@@ -1,5 +1,6 @@
 --[[
-
+-- nerd fonts need to be installed in : /home/jt/.local/share/fonts
+-- Create the fonts folder if needed!
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
