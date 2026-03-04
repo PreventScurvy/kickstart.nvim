@@ -821,6 +821,8 @@ require('catppuccin').setup {
   default_integrations = false,
 }
 
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '112'
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
