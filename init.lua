@@ -824,5 +824,12 @@ require('catppuccin').setup {
 vim.opt.colorcolumn = '112'
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.keymap.set('n', '<F2>', function()
+  vim.cmd 'set syntax="/home/jt/.config/nvim/syntax/rgbds.vim"'
+  vim.cmd 'syntax on'
+end)
+
+require('neo-tree.command').execute { toggle = true }
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
