@@ -829,7 +829,7 @@ vim.keymap.set('n', '<F2>', function()
   vim.cmd 'syntax on'
 end)
 
-require('neo-tree.command').execute { toggle = true }
+-- require('neo-tree.command').execute { toggle = true }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
