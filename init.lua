@@ -249,7 +249,7 @@ require('lazy').setup({
     -- Note: If you customize your config for yourself,
     -- it’s best to remove the Telescope plugin config entirely
     -- instead of just disabling it here, to keep your config clean.
-    enabled = true,
+    enabled = false,
     event = 'VimEnter',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -617,6 +617,7 @@ require('lazy').setup({
       -- Snippet Engine
       {
         'L3MON4D3/LuaSnip',
+        enabled = false,
         version = '2.*',
         build = (function()
           -- Build Step is needed for regex support in snippets.
@@ -759,7 +760,7 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'odin', 'c_sharp', 'python' }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
         pattern = filetypes,
@@ -781,7 +782,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
+  -- require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -830,6 +831,7 @@ vim.keymap.set('n', '<F2>', function()
 end)
 
 require('godotdev').setup {
+  enabled = false,
   editor_host = '127.0.0.1', -- Godot editor host
   editor_port = 6005, -- Godot LSP port
   debug_port = 6006, -- Godot debugger port
